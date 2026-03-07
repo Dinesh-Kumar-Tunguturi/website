@@ -35,14 +35,18 @@ const HomePage = () => (
   <div className="home-page">
     <div className="grain-overlay" />
     <Navbar />
-    <main className="container hero-lyft" style={{ overflow: 'visible' }}>
-      <HeroSection />
+    <main style={{ width: '100%', overflow: 'hidden' }}>
+      <header className="hero-lyft">
+        <div className="container">
+          <HeroSection />
+        </div>
+      </header>
       <CreatorScroller />
       <HeroCTA />
       <CompanyTicker />
       <div id="process"><ProcessFlow /></div>
       <div id="about"><AboutUs /></div>
-      <WhyChoose />
+      <div id="why"><WhyChoose /></div>
       <DomainsSupport />
       <div id="testimonials"><Testimonials /></div>
       <div id="contact"><ContactSection /></div>
@@ -73,7 +77,7 @@ const HeroSection = () => (
 );
 
 const HeroCTA = () => (
-  <div className="btn-cta-wrapper" style={{ marginTop: '-40px' }}>
+  <div className="btn-cta-wrapper">
     <Link to="/signup" style={{ textDecoration: 'none' }}>
       <MagneticButton className="btn-cta">Get Started</MagneticButton>
     </Link>

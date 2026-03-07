@@ -30,7 +30,7 @@ const WhyChoose = () => {
             <div className="container">
                 <div className="why-header">
                     <div className="why-badge">Why Us</div>
-                    <h2>Why Choose Apply Wizz?</h2>
+                    <h2>Why Choose Nexora Protech Solution?</h2>
                     <p className="subtitle">We apply strategically, daily, and only for relevant roles — so you get interviews, not just inbox noise.</p>
                 </div>
 

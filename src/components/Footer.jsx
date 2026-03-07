@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="footer-brand">
                         <Link to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
                             <div style={{ width: 32, height: 32, background: '#00d75a', borderRadius: '6px', transform: 'rotate(-10deg)', marginRight: '10px' }}></div>
-                            BrandLyft
+                            Nexora Protech Solution
                         </Link>
                         <p>Elevating your professional journey with strategic, data-driven job applications.</p>
                         <div className="social-links">
@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2026 BrandLyft Inc. All rights reserved.</p>
+                    <p>© 2026 Nexora Protech Solution Inc. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <Link to="/terms">Terms of Service</Link>
                         <Link to="/privacy">Cookies Policy</Link>
