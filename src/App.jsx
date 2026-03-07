@@ -78,14 +78,16 @@ const HeroSection = () => (
 
 const HeroCTA = () => (
   <div className="btn-cta-wrapper">
-    <Link to="/signup" style={{ textDecoration: 'none' }}>
-      <MagneticButton className="btn-cta">Get Started</MagneticButton>
-    </Link>
-    <div className="handwritten free-text" style={{ bottom: '-40px', left: '-100px', transform: 'rotate(-5deg)' }}>
-      It's free
-      <svg style={{ position: 'absolute', width: 60, height: 30, top: -10, left: 60 }}>
-        <path d="M5,25 Q30,10 60,5" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" />
-      </svg>
+    <div style={{ position: 'relative' }}>
+      <Link to="/signup" style={{ textDecoration: 'none' }}>
+        <MagneticButton className="btn-cta">Get Started</MagneticButton>
+      </Link>
+      <div className="handwritten free-text" style={{ bottom: '-40px', left: '-100px', transform: 'rotate(-5deg)' }}>
+        It's free
+        <svg style={{ position: 'absolute', width: 60, height: 30, top: -10, left: 60 }}>
+          <path d="M5,25 Q30,10 60,5" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      </div>
     </div>
   </div>
 );
