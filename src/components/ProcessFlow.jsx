@@ -25,7 +25,7 @@ const ProcessFlow = () => {
                 <div className="process-badge" style={{ display: 'inline-block', border: '1.5px solid #111', padding: '8px 24px', borderRadius: '50px', fontWeight: 700, fontSize: '0.8rem', marginBottom: '24px' }}>PROCESS</div>
                 <h2 style={{ fontSize: '3.8rem', fontWeight: 800, marginBottom: '20px', letterSpacing: '-0.02em' }}>Your Job Hunt Starts Here</h2>
                 <p className="subtitle" style={{ maxWidth: '650px', margin: '0 auto', color: '#666', fontSize: '1.1rem', lineHeight: 1.5 }}>
-                    Let us simplify your search — from form to first interview, we handle the hustle so you do not have to.
+                    A simple 3-step process that helps you apply to more jobs, stay consistent, and increase your chances of getting interviews
                 </p>
             </div>
 

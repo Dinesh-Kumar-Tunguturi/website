@@ -64,14 +64,14 @@ const HeroSection = () => (
     transition={{ duration: 0.8 }}
     style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
   >
-    <div className="badge-creators">Join over 100,000 happy creators</div>
+    <div className="badge-creators">Helping Job Seekers Land More Interviews Faster</div>
     <div style={{ position: 'relative' }}>
       <h1 style={{ letterSpacing: '-0.05em' }}>
-        Engage Audiences<br />with Stunning Videos
+        Land More Interviews<br />Without Spending Hours Applying
       </h1>
     </div>
     <p className="hero-desc">
-      Boost Your Brand with High-Impact Short Videos from our expert content creators. Our team is ready to propel your business forward
+      We apply to 30+ jobs every single day on your behalf — consistently and strategically. We handle the hustle so you can focus on the interview.
     </p>
   </motion.div>
 );
@@ -82,12 +82,12 @@ const HeroCTA = () => (
       <Link to="/signup" style={{ textDecoration: 'none' }}>
         <MagneticButton className="btn-cta">Get Started</MagneticButton>
       </Link>
-      <div className="handwritten free-text" style={{ bottom: '-40px', left: '-100px', transform: 'rotate(-5deg)' }}>
+      {/* <div className="handwritten free-text" style={{ bottom: '-40px', left: '-100px', transform: 'rotate(-5deg)' }}>
         It's free
         <svg style={{ position: 'absolute', width: 60, height: 30, top: -10, left: 60 }}>
           <path d="M5,25 Q30,10 60,5" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" />
         </svg>
-      </div>
+      </div> */}
     </div>
   </div>
 );

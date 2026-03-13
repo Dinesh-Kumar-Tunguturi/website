@@ -34,40 +34,94 @@ const WhyChoose = () => {
                     <p className="subtitle">We apply strategically, daily, and only for relevant roles — so you get interviews, not just inbox noise.</p>
                 </div>
 
-                <div className="why-grid-top">
-                    <FeatureCard
-                        title="Consistency That Delivers"
-                        desc="We apply to 20-25 fresh job openings every single day, handpicked from trusted career portals and matched to your profile."
-                        img="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
-                        badgeText="Real Jobs, Applied Daily"
-                    />
-                    <FeatureCard
-                        title="Tailored, Not Spammy"
-                        desc="Every resume is tailored, every application is tracked, and every opportunity is selected with care — aiming winners, hitting winner."
-                        img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                        badgeText="Real Jobs, Applied Daily"
-                    />
-                </div>
+                <div className="why-bento-grid">
+                    {/* Card 1: Application Engine */}
+                    <motion.div 
+                        className="bento-card card-small-top"
+                        whileHover={{ y: -8 }}
+                    >
+                        <div className="why-card-dot"></div>
+                        <div className="bento-content">
+                            <div className="card-badge-v2">Engine</div>
+                            <h3>Daily Application Engine</h3>
+                            <ul className="bento-list">
+                                <li><span>•</span> 25+ High-Quality Job Apps Daily</li>
+                                <li><span>•</span> 24/7 Market Monitoring</li>
+                                <li><span>•</span> Automated Smart-Role Matching</li>
+                            </ul>
+                        </div>
+                    </motion.div>
 
-                <div className="why-wide-card">
-                    <div className="why-card-dot"></div>
-                    <div className="wide-content">
-                        <h3>The 2025 Guide to Smarter <span style={{ color: '#00d75a' }}>Job Hunting</span></h3>
-                        <ul className="guide-list">
-                            <li><span>+</span> Start by understanding the fundamental concepts of talent acquisition.</li>
-                            <li><span>+</span> Discover guidance on crafting clear and compelling job descriptions that accurately reflect.</li>
-                            <li><span>+</span> Practical tips for conducting effective interviews, including types of interview questions.</li>
-                        </ul>
-                        <button className="btn-know-more-small">Know more ↗</button>
-                    </div>
-                    <div className="wide-image">
-                        <div className="guide-book-cover">
-                            <div className="book-stars">✦ ✦<br />✦ ✦</div>
-                            <div className="book-bottom">
-                                <p>HOW TO <span>GET HIRED</span> BY TOP COMPANIES IN THE WORLD</p>
+                    {/* Card 2: Strategic Manager */}
+                    <motion.div 
+                        className="bento-card card-tall"
+                        whileHover={{ y: -8 }}
+                    >
+                        <div className="why-card-dot"></div>
+                        <div className="bento-content">
+                            <div className="card-badge-v2">Support</div>
+                            <h3>Dedicated Account Manager</h3>
+                            <p style={{ marginBottom: '20px', color: '#666', lineHeight: '1.6' }}>
+                                Your personal career coach who doesn't just apply, but optimizes your entire professional presence.
+                            </p>
+                            <ul className="bento-list" style={{ marginBottom: '30px' }}>
+                                <li><span>✓</span> Resume & LinkedIn Overhaul</li>
+                                <li><span>✓</span> Weekly Progress Reviews</li>
+                                <li><span>✓</span> Direct Interview Scheduling</li>
+                                <li><span>✓</span> Salary Negotiation Support</li>
+                            </ul>
+                            <div className="manager-mini-card">
+                                <div className="manager-icon">🎯</div>
+                                <div className="manager-mini-info">
+                                    <span className="label">Next Session</span>
+                                    <span className="value">1-on-1 Strategy Call</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
+
+                    {/* Card 3: Document Mastery */}
+                    <motion.div 
+                        className="bento-card card-small-bottom"
+                        whileHover={{ y: -8 }}
+                    >
+                        <div className="why-card-dot"></div>
+                        <div className="bento-content">
+                            <div className="card-badge-v2">Expertise</div>
+                            <h3>ATS Document Mastery</h3>
+                            <ul className="bento-list">
+                                <li><span>•</span> 99% ATS Pass Rate Guaranteed</li>
+                                <li><span>•</span> Keyword Injection Technology</li>
+                                <li><span>•</span> Professional Bio Crafting</li>
+                            </ul>
+                        </div>
+                    </motion.div>
+
+                    {/* Card 4: The Guide (Full Width) */}
+                    <motion.div 
+                        className="bento-card card-guide-wide"
+                        whileHover={{ y: -5 }}
+                    >
+                        <div className="why-card-dot"></div>
+                        <div className="wide-content">
+                            <h3>The 2025 Masterclass: <span style={{ color: '#00d75a' }}>Job Search Mastery</span></h3>
+                            <ul className="guide-list">
+                                <li><span>+</span> Cracking the Hidden Job Market strategies.</li>
+                                <li><span>+</span> Psychology of high-impact interview responses.</li>
+                                <li><span>+</span> Building a recession-proof professional brand.</li>
+                            </ul>
+                            <button className="btn-know-more-small">
+                                Get Full Access <span>↗</span>
+                            </button>
+                        </div>
+                        <div className="wide-image-v2">
+                            <img 
+                                src="/career-success.png" 
+                                alt="Career Success Success Illustration" 
+                                className="illustration-img"
+                            />
+                        </div>
+                    </motion.div>
                 </div>
             </div>
 

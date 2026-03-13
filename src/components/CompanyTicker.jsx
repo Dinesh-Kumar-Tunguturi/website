@@ -7,11 +7,11 @@ const CompanyTicker = () => {
         { name: 'Apple', logo: '/logos/apple.svg' },
         { name: 'Walmart', logo: '/logos/walmart.svg' },
         { name: 'Ford', logo: '/logos/ford.svg' },
-        { name: 'Morgan Stanley', logo: '/logos/morgan_stanley.svg' },
-        { name: 'Adobe', logo: '/logos/adobe.svg' },
-        { name: 'Bank of America', logo: '/logos/bank_of_america.svg' },
-        { name: 'UnitedHealth Group', logo: '/logos/unitedhealth.svg' },
-        { name: 'HCA Healthcare', logo: '/logos/hca.svg' },
+        { name: 'Morgan Stanley', useText: true },
+        { name: 'Adobe', logo: '/logos/adobe-after-effects-svgrepo-com.svg' },
+        { name: 'Bank of America', logo: '/logos/bank-campus-court-svgrepo-com.svg' },
+        { name: 'UnitedHealth Group', useText: true },
+        { name: 'HCA Healthcare', useText: true },
     ];
 
     const tickerItems = [...companies, ...companies, ...companies];
@@ -29,7 +29,11 @@ const CompanyTicker = () => {
             >
                 {tickerItems.map((company, i) => (
                     <div key={i} className="logo-item" title={company.name}>
-                        <img src={company.logo} alt={company.name} />
+                        {company.useText ? (
+                            <span className="logo-text">{company.name}</span>
+                        ) : (
+                            <img src={company.logo} alt={company.name} />
+                        )}
                     </div>
                 ))}
             </motion.div>
