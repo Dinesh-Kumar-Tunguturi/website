@@ -20,15 +20,26 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-full {
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -37,6 +48,9 @@ section {
   position: relative;
   z-index: 1;
   overflow: visible;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
 }
 
 body {
@@ -56,7 +70,7 @@ body {
   height: 100%;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.04;
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
 }
 
@@ -65,7 +79,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 6vw;
+  padding: 20px 6vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-creme);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .logo {
@@ -111,9 +130,42 @@ body {
   font-size: 0.95rem;
 }
 
+.btn-reach-out {
+  background: var(--text-black);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-reach-out:hover {
+  transform: translateY(-2px);
+  background: #333;
+}
+
+/* --- Mobile Menu Fixes --- */
+@media (max-width: 768px) {
+  .nav-brand {
+    padding: 15px 24px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-auth {
+    display: none;
+  }
+}
+
 /* --- Hero --- */
 .hero-lyft {
-  padding-top: 60px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,27 +349,35 @@ body {
   width: 100%;
 }
 
-.process-badge {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  border: 1px solid #1a1a1a;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 700;
+.process-header {
+  margin-bottom: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.process-section h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
+.process-badge {
+  display: inline-block;
+  border: 1.5px solid #111;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.8rem;
   margin-bottom: 24px;
 }
 
+.process-title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
 .process-section .subtitle {
-  color: #1a1a1a;
-  max-width: 600px;
-  margin: 0 auto 100px;
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
   font-weight: 500;
   line-height: 1.5;
   font-size: 1.1rem;
@@ -330,8 +390,40 @@ body {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  gap: 120px;
+  gap: 80px;
   min-height: 400px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .process-steps-container {
+    flex-direction: column !important;
+    gap: 60px !important;
+    display: flex !important;
+    min-height: auto;
+  }
+  .process-connector {
+    display: none;
+  }
+  .process-title {
+    font-size: 2.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-circle {
+    width: 220px !important;
+    height: 220px !important;
+    padding: 20px !important;
+  }
+  .process-title {
+    font-size: 2.2rem !important;
+  }
+  .step-indicator {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 0.9rem !important;
+  }
 }
 
 .step-card {
@@ -1939,6 +2031,29 @@ section p.subtitle,
     font-size: 1rem;
   }
 
+  .footer-top {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .footer-links-grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+  }
+
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
@@ -1948,6 +2063,36 @@ section p.subtitle,
 
   .footer-bottom-links {
     gap: 15px;
+  }
+
+  .process-section .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .process-header {
+    text-align: center !important;
+    align-items: center !important;
+    flex: 1 1 100% !important;
+  }
+
+  .process-title {
+    text-align: center !important;
+  }
+
+  .process-section .subtitle {
+    text-align: center !important;
+  }
+
+  .process-steps-container {
+    flex: 1 1 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .process-connector {
+    display: none;
   }
 }
 

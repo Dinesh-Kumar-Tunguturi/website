@@ -14,9 +14,9 @@ const Navbar = () => {
 
     return (
         <nav className="nav-brand">
-            <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div style={{ width: 32, height: 32, background: '#ff5f53', borderRadius: '6px', transform: 'rotate(-10deg)', marginRight: '8px' }}></div>
-                Nexora Protech Solution
+            <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                <img src="/logos/logo_transparent.svg" alt="Nexaro Pro Logo" style={{ height: '55px', marginRight: '-8px' }} />
+                Nexaro Pro
             </Link>
 
             {/* Desktop Links */}
@@ -30,8 +30,7 @@ const Navbar = () => {
             </div>
 
             <div className="nav-auth">
-                <Link to="/login" className="btn-login" style={{ textDecoration: 'none' }}>Login</Link>
-                <Link to="/signup" className="btn-signup" style={{ textDecoration: 'none' }}>Sign Up</Link>
+                <Link to="/#contact" onClick={() => { window.location.hash = 'contact'; closeMenu(); }} className="btn-reach-out">Reach Us <span style={{ marginLeft: '8px' }}>↗</span></Link>
             </div>
 
             {/* Hamburger Button for Mobile */}
@@ -51,8 +50,7 @@ const Navbar = () => {
                     <Link to="/#pricing" onClick={() => { window.location.replace('/#pricing'); closeMenu(); }}>Pricing</Link>
                     <Link to="/#faq" onClick={() => { window.location.replace('/#faq'); closeMenu(); }}>FAQ</Link>
                     <div className="mobile-auth">
-                        <Link to="/login" className="btn-login" onClick={closeMenu}>Login</Link>
-                        <Link to="/signup" className="btn-signup" onClick={closeMenu}>Sign Up</Link>
+                        <Link to="/#contact" className="btn-reach-out" onClick={() => { window.location.hash = 'contact'; closeMenu(); }}>Reach Us ↗</Link>
                     </div>
                 </div>
             </div>

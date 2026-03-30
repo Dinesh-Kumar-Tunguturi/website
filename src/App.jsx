@@ -16,7 +16,6 @@ import ContactSection from './components/ContactSection';
 import PricingSection from './components/PricingSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
-
 // Page Imports
 import FeaturesPage from './pages/FeaturesPage';
 import TermsOfService from './pages/TermsOfService';
@@ -69,6 +68,9 @@ const HeroSection = () => (
       <h1 style={{ letterSpacing: '-0.05em' }}>
         Land More Interviews<br />Without Spending Hours Applying
       </h1>
+      <Link to="/#contact" onClick={() => window.location.hash = 'contact'} className="btn-reach-out" style={{ margin: '20px auto', width: 'max-content' }}>
+        Reach Us <span style={{ marginLeft: '8px' }}>↗</span>
+      </Link>
     </div>
     <p className="hero-desc">
       We apply to 30+ jobs every single day on your behalf — consistently and strategically. We handle the hustle so you can focus on the interview.
@@ -79,15 +81,9 @@ const HeroSection = () => (
 const HeroCTA = () => (
   <div className="btn-cta-wrapper">
     <div style={{ position: 'relative' }}>
-      <Link to="/signup" style={{ textDecoration: 'none' }}>
+      <Link to="/#contact" onClick={() => window.location.hash = 'contact'} style={{ textDecoration: 'none' }}>
         <MagneticButton className="btn-cta">Get Started</MagneticButton>
       </Link>
-      {/* <div className="handwritten free-text" style={{ bottom: '-40px', left: '-100px', transform: 'rotate(-5deg)' }}>
-        It's free
-        <svg style={{ position: 'absolute', width: 60, height: 30, top: -10, left: 60 }}>
-          <path d="M5,25 Q30,10 60,5" fill="none" stroke="#222" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      </div> */}
     </div>
   </div>
 );

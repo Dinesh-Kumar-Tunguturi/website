@@ -11,11 +11,11 @@ const TermsOfService = () => {
                 <div className="terms-content" style={{ color: '#444', lineHeight: '1.8' }}>
                     <section style={{ marginBottom: '32px' }}>
                         <h2 style={{ fontSize: '1.3rem', color: '#111', marginBottom: '16px' }}>1. Introduction</h2>
-                        <p>Welcome to Nexora Protech Solution. By using our website and services, you agree to comply with and be bound by the following terms and conditions of use. Please review these terms carefully.</p>
+                        <p>Welcome to Nexaro Pro. By using our website and services, you agree to comply with and be bound by the following terms and conditions of use. Please review these terms carefully.</p>
                     </section>
                     <section style={{ marginBottom: '32px' }}>
                         <h2 style={{ fontSize: '1.3rem', color: '#111', marginBottom: '16px' }}>2. Service Description</h2>
-                        <p>Nexora Protech Solution provides an automated job application and profile management service. We act as your authorized representative to submit applications to third-party job boards on your behalf.</p>
+                        <p>Nexaro Pro provides an automated job application and profile management service. We act as your authorized representative to submit applications to third-party job boards on your behalf.</p>
                     </section>
                     <section style={{ marginBottom: '32px' }}>
                         <h2 style={{ fontSize: '1.3rem', color: '#111', marginBottom: '16px' }}>3. User Responsibilities</h2>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactSection = () => {
     return (
-        <section className="contact-section">
+        <section className="contact-section" id="contact">
             <div className="container">
                 <div className="contact-header">
                     <h2>Still Confused About Your Next Step?</h2>
@@ -22,7 +22,47 @@ const ContactSection = () => {
                                 </div>
                                 <div className="form-group">
                                     <label>Phone *</label>
-                                    <input type="tel" placeholder="Enter your phone" required />
+                                    <div style={{ display: 'flex', gap: '5px' }}>
+                                        <select defaultValue="+1" style={{ width: '80px', borderRadius: '8px', border: '1.5px solid #eee', fontSize: '0.9rem', cursor: 'pointer' }}>
+                                            <option value="+1">🇺🇸 +1</option>
+                                            <option value="+91">🇮🇳 +91</option>
+                                            <option value="+44">🇬🇧 +44</option>
+                                            <option value="+61">🇦🇺 +61</option>
+                                            <option value="+1">🇨🇦 +1</option>
+                                            <option value="+49">🇩🇪 +49</option>
+                                            <option value="+33">🇫🇷 +33</option>
+                                            <option value="+971">🇦🇪 +971</option>
+                                            <option value="+65">🇸🇬 +65</option>
+                                            <option value="+81">🇯🇵 +81</option>
+                                            <option value="+86">🇨🇳 +86</option>
+                                            <option value="+55">🇧🇷 +55</option>
+                                            <option value="+7">🇷🇺 +7</option>
+                                            <option value="+27">🇿🇦 +27</option>
+                                            <option value="+34">🇪🇸 +34</option>
+                                            <option value="+39">🇮🇹 +39</option>
+                                            <option value="+52">🇲🇽 +52</option>
+                                            <option value="+60">🇲🇾 +60</option>
+                                            <option value="+62">🇮🇩 +62</option>
+                                            <option value="+64">🇳🇿 +64</option>
+                                            <option value="+66">🇹🇭 +66</option>
+                                            <option value="+82">🇰🇷 +82</option>
+                                            <option value="+90">🇹🇷 +90</option>
+                                            <option value="+92">🇵🇰 +9 Pakistan</option>
+                                            <option value="+94">🇱🇰 +94</option>
+                                            <option value="+351">🇵🇹 +351</option>
+                                            <option value="+353">🇮🇪 +353</option>
+                                            <option value="+358">🇫🇮 +358</option>
+                                            <option value="+41">🇨🇭 +41</option>
+                                            <option value="+420">🇨🇿 +420</option>
+                                            <option value="+45">🇩🇰 +45</option>
+                                            <option value="+46">🇸🇪 +46</option>
+                                            <option value="+47">🇳🇴 +47</option>
+                                            <option value="+48">🇵🇱 +48</option>
+                                            <option value="+84">🇻🇳 +84</option>
+                                            <option value="+966">🇸🇦 +966</option>
+                                        </select>
+                                        <input type="tel" placeholder="Enter phone" required style={{ flex: 1 }} />
+                                    </div>
                                 </div>
                             </div>
 

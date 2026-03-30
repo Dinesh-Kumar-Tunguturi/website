@@ -117,7 +117,9 @@ const DomainsSupport = () => {
                 </div>
 
                 <div className="domains-footer">
-                    <button className="btn-view-more">View More Domains ↗</button>
+                    <button className="btn-view-more" onClick={() => { window.location.hash = 'contact'; }}>
+                        View More Domains ↗
+                    </button>
                 </div>
             </div>
         </section>

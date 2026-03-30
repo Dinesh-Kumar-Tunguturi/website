@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="footer-main">
-            <div className="container" style={{ margin: '0 auto' }}>
+            <div className="container-full" style={{ padding: '0 5vw' }}>
                 <div className="footer-top">
                     <div className="footer-brand">
-                        <Link to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-                            <div style={{ width: 32, height: 32, background: '#00d75a', borderRadius: '6px', transform: 'rotate(-10deg)', marginRight: '10px' }}></div>
-                            Nexora Protech Solution
+                        <Link to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                            <img src="/logos/logo_transparent.svg" alt="Nexaro Pro Logo" style={{ height: '55px', marginRight: '-5px' }} />
+                            Nexaro Pro
                         </Link>
                         <p>Elevating your professional journey with strategic, data-driven job applications.</p>
-                        <div className="social-links">
+                        <Link to="/#contact" onClick={() => window.location.hash = 'contact'} className="btn-reach-out" style={{ width: 'max-content', marginTop: '10px' }}>
+                            Reach Us <span style={{ marginLeft: '8px' }}>↗</span>
+                        </Link>
+                        <div className="social-links" style={{ marginTop: '20px' }}>
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">𝕏</a>
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
                             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">ig</a>
@@ -42,7 +45,7 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2026 Nexora Protech Solution Inc. All rights reserved.</p>
+                    <p>© 2026 Nexaro Pro Inc. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <Link to="/terms">Terms of Service</Link>
                         <Link to="/privacy">Cookies Policy</Link>
