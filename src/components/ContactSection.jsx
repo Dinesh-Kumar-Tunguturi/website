@@ -231,9 +231,10 @@ const ContactSection = () => {
                                     </div>
                                 )}
 
-                                <button type="submit" className="btn-send" disabled={status.loading}>
+                                <button type="submit" className="btn-send">
                                     {status.loading ? 'Sending...' : 'Send Message'}
                                 </button>
+
                             </form>
                         )}
                     </div>
