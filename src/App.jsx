@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import PreservedLink from './components/PreservedLink';
 import { motion } from 'framer-motion';
 
 // Component Imports
@@ -68,9 +69,9 @@ const HeroSection = () => (
       <h1 style={{ letterSpacing: '-0.05em' }}>
         Land More Interviews<br />Without Spending Hours Applying
       </h1>
-      <Link to="/#contact" onClick={() => window.location.hash = 'contact'} className="btn-reach-out" style={{ margin: '20px auto', width: 'max-content' }}>
+      <PreservedLink to="/#contact" className="btn-reach-out" style={{ margin: '20px auto', width: 'max-content' }}>
         Reach Us <span style={{ marginLeft: '8px' }}>↗</span>
-      </Link>
+      </PreservedLink>
     </div>
     <p className="hero-desc">
       We apply to 30+ jobs every single day on your behalf — consistently and strategically. We handle the hustle so you can focus on the interview.
@@ -81,12 +82,21 @@ const HeroSection = () => (
 const HeroCTA = () => (
   <div className="btn-cta-wrapper">
     <div style={{ position: 'relative' }}>
-      <Link to="/#contact" onClick={() => window.location.hash = 'contact'} style={{ textDecoration: 'none' }}>
+      <PreservedLink to="/#contact" style={{ textDecoration: 'none' }}>
         <MagneticButton className="btn-cta">Get Started</MagneticButton>
-      </Link>
+      </PreservedLink>
     </div>
   </div>
 );
+
+// Dashboard Imports
+import Login from './pages/dashboard/Login';
+import AdminDashboard from './pages/dashboard/AdminDashboard';
+import AdminLeads from './pages/dashboard/AdminLeads';
+import AdminInfluencers from './pages/dashboard/AdminInfluencers';
+import InfluencerDashboard from './pages/dashboard/InfluencerDashboard';
+
+// ... (other imports)
 
 function App() {
   return (
@@ -97,13 +107,23 @@ function App() {
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
-        {/* Mock auth routes */}
-        <Route path="/login" element={<div style={{ padding: '100px' }}><h2>Login Page Placeholder</h2><Link to="/">Back Home</Link></div>} />
-        <Route path="/signup" element={<div style={{ padding: '100px' }}><h2>Sign Up Page Placeholder</h2><Link to="/">Back Home</Link></div>} />
+        
+        {/* Auth routes */}
+        <Route path="/login" element={<Login />} />
+        
+        {/* Admin Dashboard */}
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/leads" element={<AdminLeads />} />
+        <Route path="/admin/influencers" element={<AdminInfluencers />} />
+        
+        {/* Influencer Portal */}
+        <Route path="/portal" element={<InfluencerDashboard />} />
+
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
   );
 }
+
 
 export default App;

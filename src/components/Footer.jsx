@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PreservedLink from './PreservedLink';
 
 const Footer = () => {
     return (
@@ -7,14 +7,14 @@ const Footer = () => {
             <div className="container-full" style={{ padding: '0 5vw' }}>
                 <div className="footer-top">
                     <div className="footer-brand">
-                        <Link to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '2px' }}>
+                        <PreservedLink to="/" className="logo" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '2px' }}>
                             <img src="/logos/logo_transparent.svg" alt="Nexaro Pro Logo" style={{ height: '55px', marginRight: '-5px' }} />
                             Nexaro Pro
-                        </Link>
+                        </PreservedLink>
                         <p>Elevating your professional journey with strategic, data-driven job applications.</p>
-                        <Link to="/#contact" onClick={() => window.location.hash = 'contact'} className="btn-reach-out" style={{ width: 'max-content', marginTop: '10px' }}>
+                        <PreservedLink to="/#contact" className="btn-reach-out" style={{ width: 'max-content', marginTop: '10px' }}>
                             Reach Us <span style={{ marginLeft: '8px' }}>↗</span>
-                        </Link>
+                        </PreservedLink>
                         <div className="social-links" style={{ marginTop: '20px' }}>
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">𝕏</a>
                             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">in</a>
@@ -25,21 +25,21 @@ const Footer = () => {
                     <div className="footer-links-grid">
                         <div className="footer-col">
                             <h4>Product</h4>
-                            <Link to="/features">Features</Link>
-                            <Link to="/#pricing" onClick={() => window.location.replace('/#pricing')}>Pricing</Link>
+                            <PreservedLink to="/features">Features</PreservedLink>
+                            <PreservedLink to="/#pricing">Pricing</PreservedLink>
                             <a href="#">API</a>
                         </div>
                         <div className="footer-col">
                             <h4>Company</h4>
-                            <Link to="/#about" onClick={() => window.location.replace('/#about')}>About</Link>
+                            <PreservedLink to="/#about">About</PreservedLink>
                             <a href="#">Careers</a>
                             <a href="#">Blog</a>
                         </div>
                         <div className="footer-col">
                             <h4>Support</h4>
-                            <Link to="/#faq" onClick={() => window.location.replace('/#faq')}>FAQ</Link>
-                            <Link to="/#contact" onClick={() => window.location.replace('/#contact')}>Contact</Link>
-                            <Link to="/privacy">Privacy</Link>
+                            <PreservedLink to="/#faq">FAQ</PreservedLink>
+                            <PreservedLink to="/#contact">Contact</PreservedLink>
+                            <PreservedLink to="/privacy">Privacy</PreservedLink>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>© 2026 Nexaro Pro Inc. All rights reserved.</p>
                     <div className="footer-bottom-links">
-                        <Link to="/terms">Terms of Service</Link>
-                        <Link to="/privacy">Cookies Policy</Link>
+                        <PreservedLink to="/terms">Terms of Service</PreservedLink>
+                        <PreservedLink to="/privacy">Cookies Policy</PreservedLink>
                     </div>
                 </div>
             </div>

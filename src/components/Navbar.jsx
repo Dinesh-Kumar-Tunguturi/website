@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import PreservedLink from './PreservedLink';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,23 +14,23 @@ const Navbar = () => {
 
     return (
         <nav className="nav-brand">
-            <Link to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '2px' }}>
+            <PreservedLink to="/" className="logo" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '2px' }}>
                 <img src="/logos/logo_transparent.svg" alt="Nexaro Pro Logo" style={{ height: '55px', marginRight: '-8px' }} />
                 Nexaro Pro
-            </Link>
+            </PreservedLink>
 
             {/* Desktop Links */}
             <div className="nav-links">
-                <Link to="/">Home</Link>
-                <Link to="/#about" onClick={() => { window.location.replace('/#about'); closeMenu(); }}>About</Link>
-                <Link to="/#why" onClick={() => { window.location.replace('/#why'); closeMenu(); }}>Why Us</Link>
-                <Link to="/features">Features</Link>
-                <Link to="/#pricing" onClick={() => { window.location.replace('/#pricing'); closeMenu(); }}>Pricing</Link>
-                <Link to="/#faq" onClick={() => { window.location.replace('/#faq'); closeMenu(); }}>FAQ</Link>
+                <PreservedLink to="/">Home</PreservedLink>
+                <PreservedLink to="/#about">About</PreservedLink>
+                <PreservedLink to="/#why">Why Us</PreservedLink>
+                <PreservedLink to="/features">Features</PreservedLink>
+                <PreservedLink to="/#pricing">Pricing</PreservedLink>
+                <PreservedLink to="/#faq">FAQ</PreservedLink>
             </div>
 
             <div className="nav-auth">
-                <Link to="/#contact" onClick={() => { window.location.hash = 'contact'; closeMenu(); }} className="btn-reach-out">Reach Us <span style={{ marginLeft: '8px' }}>↗</span></Link>
+                <PreservedLink to="/#contact" className="btn-reach-out">Reach Us <span style={{ marginLeft: '8px' }}>↗</span></PreservedLink>
             </div>
 
             {/* Hamburger Button for Mobile */}
@@ -43,14 +43,14 @@ const Navbar = () => {
             {/* Mobile Menu Overlay */}
             <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-content">
-                    <Link to="/" onClick={closeMenu}>Home</Link>
-                    <Link to="/#about" onClick={() => { window.location.replace('/#about'); closeMenu(); }}>About</Link>
-                    <Link to="/#why" onClick={() => { window.location.replace('/#why'); closeMenu(); }}>Why Us</Link>
-                    <Link to="/features" onClick={closeMenu}>Features</Link>
-                    <Link to="/#pricing" onClick={() => { window.location.replace('/#pricing'); closeMenu(); }}>Pricing</Link>
-                    <Link to="/#faq" onClick={() => { window.location.replace('/#faq'); closeMenu(); }}>FAQ</Link>
+                    <PreservedLink to="/" onClick={closeMenu}>Home</PreservedLink>
+                    <PreservedLink to="/#about" onClick={closeMenu}>About</PreservedLink>
+                    <PreservedLink to="/#why" onClick={closeMenu}>Why Us</PreservedLink>
+                    <PreservedLink to="/features" onClick={closeMenu}>Features</PreservedLink>
+                    <PreservedLink to="/#pricing" onClick={closeMenu}>Pricing</PreservedLink>
+                    <PreservedLink to="/#faq" onClick={closeMenu}>FAQ</PreservedLink>
                     <div className="mobile-auth">
-                        <Link to="/#contact" className="btn-reach-out" onClick={() => { window.location.hash = 'contact'; closeMenu(); }}>Reach Us ↗</Link>
+                        <PreservedLink to="/#contact" className="btn-reach-out" onClick={closeMenu}>Reach Us ↗</PreservedLink>
                     </div>
                 </div>
             </div>
